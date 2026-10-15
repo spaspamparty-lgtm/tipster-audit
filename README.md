@@ -47,3 +47,9 @@ Next steps: split the workspace into addressable routes, add a PostgreSQL adapte
 Profiles separate provenance, performance and risk. Drawdown is computed only over the 15 illustrative cumulative-profit points; full-history drawdown and consecutive losses are deliberately unavailable without an event ledger. The subscription calculator applies one hypothetical monthly fee to September's fictional aggregate, with a constant stake, and does not project future returns. It excludes commissions, taxes, odds changes and missed picks. Calculator state is reset when changing profile.
 
 Run `npm test` for financial-calculation and drawdown edge cases. Browser validation covers the static export, loss after subscription cost, invalid stake recovery and mobile overflow.
+
+### Paired comparisons
+
+Analytics now compares exactly two distinct tipsters over September 2026, with a common stake and independently editable hypothetical monthly fees. Selecting the other tipster swaps the pair; each fee stays associated with its tipster while the page is open. Selections also drive the cumulative-profit chart. Risk, provenance and net-after-cost outcomes are shown separately, without a composite reliability score or automatic recommendation. Fees and stake are session-only UI state.
+
+Browser regression test: run the application, then `npx playwright install chromium` once and `npm run test:browser`. Override `APP_URL` for a static export (including `/tipster-audit/`) and optionally `CHROMIUM_PATH` to use an installed Chromium. This covers selection swapping, independent fees, shared stake, negative net outcomes, invalid inputs, profile navigation and mobile overflow.
