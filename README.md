@@ -41,3 +41,9 @@ Next steps: split the workspace into addressable routes, add a PostgreSQL adapte
 ## GitHub Pages demo
 
 `STATIC_EXPORT=1 npm run build` generates `out/` with base path `/tipster-audit`. Publish the contents to branch `gh-pages` with an empty `.nojekyll` file. GitHub repository Settings → Pages must use Deploy from a branch → gh-pages → /(root). This static demo has no server-side authentication, database or payment endpoints.
+
+### Decision-focused profiles
+
+Profiles separate provenance, performance and risk. Drawdown is computed only over the 15 illustrative cumulative-profit points; full-history drawdown and consecutive losses are deliberately unavailable without an event ledger. The subscription calculator applies one hypothetical monthly fee to September's fictional aggregate, with a constant stake, and does not project future returns. It excludes commissions, taxes, odds changes and missed picks. Calculator state is reset when changing profile.
+
+Run `npm test` for financial-calculation and drawdown edge cases. Browser validation covers the static export, loss after subscription cost, invalid stake recovery and mobile overflow.
