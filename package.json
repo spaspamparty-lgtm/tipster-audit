@@ -1,7 +1,7 @@
 {
   "name": "tipster-audit",
   "version": "1.0.0",
-  "description": "Tipster Audit \u2014 performance intelligence dashboard",
+  "description": "Tipster Audit — performance intelligence dashboard",
   "main": "index.js",
   "scripts": {
     "dev": "next dev --hostname 0.0.0.0",
@@ -9,7 +9,8 @@
     "start": "next start --hostname 0.0.0.0",
     "typecheck": "tsc --noEmit",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
-    "test:browser": "node tests/comparison.browser.cjs"
+    "test:browser": "node tests/comparison.browser.cjs",
+    "test:matches": "node tests/matches.browser.cjs"
   },
   "repository": {
     "type": "git",
