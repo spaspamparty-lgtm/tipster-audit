@@ -1,0 +1,38 @@
+{
+  "name": "tipster-audit",
+  "version": "1.0.0",
+  "description": "Tipster Audit — performance intelligence dashboard",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "start": "next start --hostname 0.0.0.0",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spaspamparty-lgtm/tipster-audit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/spaspamparty-lgtm/tipster-audit/issues"
+  },
+  "homepage": "https://github.com/spaspamparty-lgtm/tipster-audit#readme",
+  "private": true,
+  "dependencies": {
+    "lucide-react": "^1.57.0",
+    "next": "^16.4.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "recharts": "^3.10.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^7.0.2"
+  }
+}
